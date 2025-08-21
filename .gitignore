@@ -1,0 +1,4 @@
+data
+node_modules
+src/config/secrets.json
+src/config/configuration.json

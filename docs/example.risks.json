@@ -1,0 +1,105 @@
+{
+  "domains": {
+    "Standard Risk Domains": {
+      "definition": "Broadly relevant risk domains applicable across the European Union, designed for general monitoring of personal and systemic risks affecting long-term autonomy, digital rights, and socioeconomic viability.",
+      "risks": [
+        {
+          "name": "Technological Displacement and Economic Resilience",
+          "definition": "Risks associated with economic instability, rapid technological shifts, and job displacement within the EU labor market.",
+          "triggers": [
+            "AI automation in skilled sectors",
+            "Persistent inflation in the eurozone",
+            "Structural unemployment in key EU industries"
+          ],
+          "indicators": [
+            "Decline in open tech/STEM positions EU-wide",
+            "Real wage stagnation across major EU economies",
+            "Rise in skilled worker emigration from EU"
+          ],
+          "consequences": [
+            "Erosion of middle-class security",
+            "Increased inter-EU and external migration",
+            "Socioeconomic polarization"
+          ],
+          "mitigations": [
+            "Cross-border remote work",
+            "Continuous skills upgrading",
+            "Currency diversification and EU market hedging"
+          ],
+          "keywords": [
+            "AI job loss Europe",
+            "STEM unemployment EU",
+            "Eurozone inflation trend",
+            "Remote work tax rules EU",
+            "Tech worker emigration Europe"
+          ],
+          "critical_threshold": "Sustained inability to secure viable employment or economic stability across multiple EU jurisdictions within 12 months."
+        },
+        {
+          "name": "Digital Surveillance and Privacy Regulation",
+          "definition": "Legal and technical shifts in the EU that undermine digital privacy, encrypted communication, or anonymity.",
+          "triggers": [
+            "Adoption of cross-EU surveillance frameworks",
+            "Ban or heavy regulation of end-to-end encryption",
+            "Mandatory biometric or age verification for internet services"
+          ],
+          "indicators": [
+            "ChatControl implementation progress",
+            "Cross-border digital ID mandate updates",
+            "Debates on privacy tech bans in EU Parliament"
+          ],
+          "consequences": [
+            "Collapse of anonymous digital space",
+            "Behavioral monitoring becoming normalized",
+            "Chilling effect on communication and dissent"
+          ],
+          "mitigations": [
+            "Use of decentralized and open-source digital tools",
+            "Data localization avoidance",
+            "Legal residency in privacy-respecting jurisdictions"
+          ],
+          "keywords": [
+            "ChatControl Europe",
+            "Encrypted messaging ban EU",
+            "Digital ID EU mandate",
+            "VPN regulation EU",
+            "E2E encryption ban proposal"
+          ],
+          "critical_threshold": "Effective criminalization or complete disablement of secure digital communication within the EU."
+        },
+        {
+          "name": "Crisis-Driven Disruption and Emergency Governance",
+          "definition": "Risks stemming from armed conflict, environmental crises, or emergency governance impacting EU civil order and mobility.",
+          "triggers": [
+            "Military conscription policy resurgence in EU",
+            "Climate-driven migration or disasters",
+            "Cross-EU energy grid instability"
+          ],
+          "indicators": [
+            "EU border militarization or draft proposals",
+            "Wildfires, floods, or earthquakes affecting multiple countries",
+            "EU-wide civil protection alerts or restrictions"
+          ],
+          "consequences": [
+            "Loss of civil liberties under emergency rule",
+            "Forced displacement or restricted movement",
+            "Strain on infrastructure and public services"
+          ],
+          "mitigations": [
+            "Dual citizenship or right of residence in multiple EU states",
+            "Resilient infrastructure planning",
+            "Mobility fallback options across Schengen"
+          ],
+          "keywords": [
+            "EU military draft policy",
+            "Climate displacement Europe",
+            "Energy blackouts EU",
+            "NATO conflict escalation",
+            "Schengen border closure alert"
+          ],
+          "critical_threshold": "Confirmed activation of conscription, or multi-country infrastructure collapse affecting freedom of movement or basic needs."
+        }
+      ]
+    }
+  }
+}

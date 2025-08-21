@@ -1,0 +1,39 @@
+{
+    "email": {
+      "smtp_host": "smtp-relay.brevo.com",
+      "smtp_port": 587,
+      "smtp_user": "<smtp_user>",
+      "email_from": "AI Report <email-from>",
+      "email_to": "<email-to>"
+    },
+    "openai_api": {
+     "file_processing_timeout": 60,
+     "domains_processed_per_call": 5
+    },
+    "google_news": {
+      "query_url": "https://news.google.com/rss/search?q=((encodedQuery))",
+      "max_query_length": 500,
+      "min_query_delay": 1,
+      "max_query_delay": 5,
+      "max_results_per_query": 10
+    },
+    "execution": {
+      "standard_delay_time": 60,
+      "stages": {
+       "query_plan_generation": "query plan generation",
+       "risk_analysis": "risk analysis"
+      }
+    },
+    "data": {
+      "data_types": {
+        "risks": "risks",
+        "queries": "queries",
+        "news": "news",
+        "report": "report"
+     },
+     "file_types": {
+        "text": "txt",
+        "json": "json"
+    }
+   }
+}
