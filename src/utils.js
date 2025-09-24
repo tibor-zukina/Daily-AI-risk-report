@@ -40,14 +40,22 @@ export function extractJsonFromMarkdown(markdownText) {
     .trim();
 }
 
-export function currentDate(delimiter = '-') {
+export function currentDate(delimiter = '-', showTime = false) {
 
   const today = new Date();
   const yyyy = today.getFullYear();
   const mm = String(today.getMonth() + 1).padStart(2, '0');
   const dd = String(today.getDate()).padStart(2, '0');
 
-  const currentDate = `${yyyy}${delimiter}${mm}${delimiter}${dd}`;
+  let currentDate = `${yyyy}${delimiter}${mm}${delimiter}${dd}`;
+  
+  if (showTime) {
+    const hh = String(today.getHours()).padStart(2, '0');
+    const min = String(today.getMinutes()).padStart(2, '0');
+    const ss = String(today.getSeconds()).padStart(2, '0');
+    currentDate += `${delimiter}${hh}${delimiter}${min}${delimiter}${ss}`;
+  }
+  
   return currentDate;
 }
 

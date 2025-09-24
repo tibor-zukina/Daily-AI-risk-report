@@ -59,7 +59,7 @@ export function writeToFile(filePath, content) {
 
 export function getDataFilename(dataType, fileType) {
 
-  return getFullPath(`../data/${dataType}/${currentDate('_')}_${dataType}.${fileType}`);
+  return getFullPath(`../data/${dataType}/${currentDate('_', true)}_${dataType}.${fileType}`);
 }
 
 export function saveData(content, dataType, fileType) {

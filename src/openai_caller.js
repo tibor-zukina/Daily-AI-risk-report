@@ -7,7 +7,7 @@ import secretsManager from './config_drivers/secrets_manager.js';
 import configManager from './config_drivers/config_manager.js';
 import contentManager from './config_drivers/content_manager.js';
 import { standardDelay } from './utils.js';
-import { readFromFile, getDataFilename, saveData } from './io.js';
+import { getDataFilename, saveData } from './io.js';
 
 const openai = new OpenAI({ apiKey: secretsManager.OPENAI_API_KEY });
 
