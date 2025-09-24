@@ -31,6 +31,9 @@ const REPORT_DATA_TYPE = configuration.data?.data_types?.report;
 const TEXT_FILE_TYPE =  configuration.data?.file_types?.text;
 const JSON_FILE_TYPE =  configuration.data?.file_types?.json;
 
+const MIN_REPORT_LENGTH = configuration.execution?.min_report_length;
+const MAX_RETRIES = configuration.execution?.max_retries;
+
 export default {
   SMTP_HOST,
   SMTP_PORT,
@@ -51,5 +54,7 @@ export default {
   NEWS_DATA_TYPE,
   REPORT_DATA_TYPE,
   TEXT_FILE_TYPE,
-  JSON_FILE_TYPE
+  JSON_FILE_TYPE,
+  MIN_REPORT_LENGTH,
+  MAX_RETRIES
 };

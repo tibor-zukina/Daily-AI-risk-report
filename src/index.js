@@ -1,9 +1,6 @@
 import { _log, _error } from './logging.js';
-import { fetchNews } from './news_fetcher.js';
 import { sendReport } from './report_sender.js';
-import { generateQueryPlan, analyzeNewsData } from './openai_caller.js';
-import { standardDelay } from './utils.js';
-import { readFromFile, createDataDirectories } from './io.js';
+import { createDataDirectories } from './io.js';
 
 (async () => {
   try {
@@ -16,17 +13,17 @@ import { readFromFile, createDataDirectories } from './io.js';
 
     createDataDirectories();
 
-    await readFromFile(configPath)
-    .then(generateQueryPlan)
-    .then(fetchNews)
-    .then(standardDelay)
-    .then(analyzeNewsData)
-    .then(sendReport);
+    const report = await runAnalysisWithRetry(configPath);
+    await sendReport(report);
 
     process.exit(0);
 
   } catch (err) {
-    _error("Error:", err.response?.data || (err.message + err.stack));
+    const errorMessage = err.response?.data || (err.message + err.stack);
+    _error("Error:", errorMessage);
+    
+    await sendErrorNotification(err, "Daily Risk Analysis Process");
+    
     process.exit(1);
   }
 })();

@@ -18,7 +18,9 @@
       "max_results_per_query": 10
     },
     "execution": {
-      "standard_delay_time": 60,
+      "standard_delay_time": 90,
+      "min_report_length": 1000,
+      "max_retries": 3,
       "stages": {
        "query_plan_generation": "query plan generation",
        "risk_analysis": "risk analysis"
