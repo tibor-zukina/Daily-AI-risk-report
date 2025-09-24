@@ -140,17 +140,15 @@ export async function generateQueryPlan(riskConfig) {
     return queryPlanJson;
   }
 
-export async function analyzeNewsData(filePath) {
+export async function analyzeNewsData(newsFilePath) {
 
   _log("Starting news analysis");
-
-  _log(`News data saved to ${filePath} (${Buffer.byteLength(newsData)} bytes)`);
 
   _log('Processing news > Uploading risk file as an attachment');
   const riskFileId = await uploadFileAndWait(riskFilePath);
 
   _log('Processing news > Uploading news file as an attachment');
-  const newsFileId = await uploadFileAndWait(filePath);
+  const newsFileId = await uploadFileAndWait(newsFilePath);
 
   const messageContent = format(contentManager.DATA_ANALYSIS_PROMPT, [], []);
 
