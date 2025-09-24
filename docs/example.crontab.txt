@@ -1,1 +1,1 @@
-0 0 * * * mkdir -p /var/logs/scheduled_ai_report && cd /var/openai/scheduled_ai_report/src && (/usr/bin/node index.js ../data/risks.json >> /var/logs/scheduled_ai_report/log_$(date +\%Y_\%m_\%d).txt 2>> /var/logs/scheduled_ai_report/error_$(date +\%Y_\%m_\%d).txt)
+0 0 * * * mkdir -p /var/logs/scheduled_ai_report && cd /var/openai/scheduled_ai_report/src && (/usr/bin/node index.js ../data/risks.json >> /var/logs/scheduled_ai_report/log_$(date +\%Y_\%m_\%d_\%H_\%M_\%S).txt 2>> /var/logs/scheduled_ai_report/error_$(date +\%Y_\%m_\%d_\%H_\%M_\%S).txt)
