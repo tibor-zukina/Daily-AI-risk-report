@@ -59,6 +59,14 @@ export function standardDelay(input) {
   });
 }
 
+export function betweenRetriesDelay(input) {
+  const delaySec = configManager.BETWEEN_RETRIES_DELAY_TIME;
+  _log(`Adding delay of ${delaySec} seconds between retries`);
+  return new Promise(resolve => {
+    setTimeout(() => resolve(input), delaySec * 1000);
+  });
+}
+
 export function randomDelay(minDelay = configManager.GOOGLE_NEWS_MIN_QUERY_DELAY, maxDelay = configManager.GOOGLE_NEWS_MAX_QUERY_DELAY) {
   const delay = Math.floor(Math.random() * (maxDelay - minDelay + 1) + minDelay) * 1000;
   _log(`Adding random delay of ${delay / 1000} seconds`);

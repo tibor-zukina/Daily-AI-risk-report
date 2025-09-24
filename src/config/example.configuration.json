@@ -19,6 +19,7 @@
     },
     "execution": {
       "standard_delay_time": 90,
+      "between_retries_delay_time": 300,
       "min_report_length": 1000,
       "max_retries": 3,
       "stages": {

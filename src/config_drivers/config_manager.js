@@ -20,6 +20,7 @@ const GOOGLE_NEWS_MAX_QUERY_DELAY =  configuration.google_news?.max_query_delay;
 const GOOGLE_NEWS_MAX_RESULTS_PER_QUERY = configuration.google_news?.max_results_per_query;
 
 const STANDARD_DELAY_TIME = configuration.execution?.standard_delay_time;
+const BETWEEN_RETRIES_DELAY_TIME = configuration.execution?.between_retries_delay_time;
 const QUERY_PLAN_GENERATION_STAGE = configuration.execution?.stages?.query_plan_generation;
 const RISK_ANALYSIS_STAGE = configuration.execution?.stages?.risk_analysis;
 
@@ -47,6 +48,7 @@ export default {
   GOOGLE_NEWS_MAX_QUERY_DELAY,
   GOOGLE_NEWS_MAX_RESULTS_PER_QUERY,
   STANDARD_DELAY_TIME,
+  BETWEEN_RETRIES_DELAY_TIME,
   QUERY_PLAN_GENERATION_STAGE,
   RISK_ANALYSIS_STAGE,
   RISKS_DATA_TYPE,
