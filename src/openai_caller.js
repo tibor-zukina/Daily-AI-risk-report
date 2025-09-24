@@ -60,7 +60,7 @@ export async function generateQueryPlan(riskConfig) {
         const messageContent = format(contentManager.QUERY_GENERATION_PROMPT, ["((currentDate))"], [currentDate()]);
 
         const completion = await openai.chat.completions.create({
-            model: configManager.OPENAI_MODEL,
+            model: configManager.OPENAI_API_MODEL,
             messages: [
                 {
                     role: "system",
@@ -71,8 +71,8 @@ export async function generateQueryPlan(riskConfig) {
                     content: `${messageContent}\n\nPlease analyze the uploaded risk configuration file (ID: ${fileId}) and generate appropriate queries.`
                 }
             ],
-            temperature: configManager.OPENAI_TEMPERATURE,
-            max_tokens: configManager.OPENAI_MAX_TOKENS_QUERY_PLAN
+            temperature: configManager.OPENAI_API_TEMPERATURE,
+            max_tokens: configManager.OPENAI_API_MAX_TOKENS_QUERY_PLAN
         });
 
         const queryPlanJson = extractJsonFromMarkdown(completion.choices[0].message.content);
@@ -101,7 +101,7 @@ export async function analyzeNewsData(newsFilePath) {
         const messageContent = format(contentManager.DATA_ANALYSIS_PROMPT, [], []);
 
         const completion = await openai.chat.completions.create({
-            model: configManager.OPENAI_MODEL,
+            model: configManager.OPENAI_API_MODEL,
             messages: [
                 {
                     role: "system",
@@ -112,8 +112,8 @@ export async function analyzeNewsData(newsFilePath) {
                     content: `${messageContent}\n\nPlease analyze the uploaded files:\n- Risk Configuration (ID: ${riskFileId})\n- News Data (ID: ${newsFileId})\n\nProvide a comprehensive risk analysis report.`
                 }
             ],
-            temperature: configManager.OPENAI_TEMPERATURE,
-            max_tokens: configManager.OPENAI_MAX_TOKENS_ANALYSIS
+            temperature: configManager.OPENAI_API_TEMPERATURE,
+            max_tokens: configManager.OPENAI_API_MAX_TOKENS_ANALYSIS
         });
 
         const reportText = completion.choices[0].message.content;
