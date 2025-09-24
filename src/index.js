@@ -1,6 +1,8 @@
 import { _log, _error } from './logging.js';
 import { sendReport } from './report_sender.js';
 import { createDataDirectories } from './io.js';
+import { runAnalysisWithRetry } from './risk_analyzer_with_retry.js';
+import { sendErrorNotification } from './error_sender.js';
 
 (async () => {
   try {
