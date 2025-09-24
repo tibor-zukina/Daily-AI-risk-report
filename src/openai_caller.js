@@ -140,12 +140,9 @@ export async function generateQueryPlan(riskConfig) {
     return queryPlanJson;
   }
 
-export async function analyzeNewsData(newsData) {
+export async function analyzeNewsData(filePath) {
 
   _log("Starting news analysis");
-
-  // Save newsData to a local temporary file
-  const filePath = getDataFilename(configManager.NEWS_DATA_TYPE, configManager.JSON_FILE_TYPE);
 
   _log(`News data saved to ${filePath} (${Buffer.byteLength(newsData)} bytes)`);
 

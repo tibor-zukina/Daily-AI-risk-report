@@ -65,7 +65,7 @@ export function getDataFilename(dataType, fileType) {
 export function saveData(content, dataType, fileType) {
 
    const filename = getDataFilename(dataType, fileType);
-   _log(`Saving ${dataType} to ${filename}`);
+   _log(`Saving ${dataType} to ${filename} - data size: ${Buffer.byteLength(content)} bytes`);
    writeToFile(filename, content);
 
    return filename;

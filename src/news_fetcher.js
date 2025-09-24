@@ -75,7 +75,7 @@ export async function fetchNews(queryPlanJson) {
 
   const newsData = JSON.stringify({ news: allResults }, null, 2);
   _log(`Successfully fetched ${totalNews} news`);
-  saveData(newsData, configManager.NEWS_DATA_TYPE, configManager.JSON_FILE_TYPE);
+  let newsFilePath = saveData(newsData, configManager.NEWS_DATA_TYPE, configManager.JSON_FILE_TYPE);
 
-  return newsData;
+  return newsFilePath;
 }
