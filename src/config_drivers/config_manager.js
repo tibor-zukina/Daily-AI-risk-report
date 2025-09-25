@@ -11,10 +11,6 @@ const EMAIL_FROM = configuration.email?.email_from;
 const EMAIL_TO = configuration.email?.email_to;
 
 const OPENAI_API_FILE_PROCESSING_TIMEOUT = configuration.openai_api?.file_processing_timeout;
-const OPENAI_API_MODEL = configuration.openai_api?.model;
-const OPENAI_API_TEMPERATURE = configuration.openai_api?.temperature;
-const OPENAI_API_MAX_TOKENS_QUERY_PLAN = configuration.openai_api?.max_tokens_query_plan;
-const OPENAI_API_MAX_TOKENS_ANALYSIS = configuration.openai_api?.max_tokens_analysis;
 
 const GOOGLE_NEWS_QUERY_URL = configuration.google_news?.query_url;
 const GOOGLE_NEWS_MAX_QUERY_LENGTH = configuration.google_news?.max_query_length;
@@ -45,10 +41,6 @@ export default {
   EMAIL_FROM,
   EMAIL_TO,
   OPENAI_API_FILE_PROCESSING_TIMEOUT,
-  OPENAI_API_MODEL,
-  OPENAI_API_TEMPERATURE,
-  OPENAI_API_MAX_TOKENS_QUERY_PLAN,
-  OPENAI_API_MAX_TOKENS_ANALYSIS,
   GOOGLE_NEWS_QUERY_URL,
   GOOGLE_NEWS_MAX_QUERY_LENGTH,
   GOOGLE_NEWS_MIN_QUERY_DELAY,

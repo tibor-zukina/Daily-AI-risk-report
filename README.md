@@ -11,7 +11,7 @@ This repository contains the code for the automated Daily AI risk reporting proc
 ## Instructions
 
 ### External services
-- Create the Open AI API key
+- Create the Open AI API assistant using OpenAI dashboard with the details specified in `docs/example.openai_api_assistant.json`.
 - Create the free email sending account with the provider such as Brevo and set up your SMTP API key for transactional emails.
 - Request an API key from Google news with your email.
 
